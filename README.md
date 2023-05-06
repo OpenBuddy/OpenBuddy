@@ -55,10 +55,15 @@ More information about downloading the models can be found in the [Models](model
 
 ## Installation
 
-Due to LLAMA licensing restrictions, you need the original LLAMA-7B model to utilize this model. To decrypt the model weights, acquire the original LLAMA-7B model (not the Huggingface version) and execute the following command:
+Due to LLAMA licensing restrictions, you need the original LLAMA-7B model to utilize this model. To decrypt the model weights:
+
+1. Acquire the original LLAMA-7B model (not the Huggingface version).
+2. Clone this GitHub repository.
+3. Ensure that you have Python 3.7 or higher and numpy installed, you can install numpy with `pip install numpy`.
+4. Run the following command, try python3 if python does not work:
 
 ```
-python(3) decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
+python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 ```
 
 ## Usage with llama.cpp on CPU (Recommended)
