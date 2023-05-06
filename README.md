@@ -41,19 +41,7 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 
 OpenBuddy currently offers two model versions: 7B and 13B.
 
-### OpenBuddy 7B
-
-- Deployable and executable on a single NVIDIA RTX 3090 GPU, or a decent CPU
-- 4-bit quantization for CPU deployment via llama.cpp
-- Huggingface download (4-bit, CPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-7b-q4_0-enc
-- Huggingface download (bf16, GPU): https://huggingface.co/OpenBuddy/openbuddy-7b-bf16-enc
-
-### OpenBuddy 13B
-
-- Offers improved performance and capabilities
-- Requires more powerful hardware for deployment and operation
-- Scheduled for future release
-- Early access applications: https://forms.gle/tRjvhUQK2jY5e2ND7
+More information about the model versions and download links can be found in the [models.md](models.md) page.
 
 ## Future Plans
 

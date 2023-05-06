@@ -22,19 +22,7 @@ OpenBuddy 是一个功能强大的开源跨语言对话模型，提供无缝的�
 
 OpenBuddy 目前提供两个模型版本：7B 和 13B。
 
-### OpenBuddy 7B
-
-- 可以在单个 NVIDIA RTX 3090 GPU 上部署和运行
-- 可以量化为 4 位，使用 llama.cpp 在 CPU 上部署（输出质量将略有降低）
-- Huggingface 下载 (4-bit, CPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-7b-q4_0-enc
-- Huggingface 下载 (bf16, GPU): https://huggingface.co/OpenBuddy/openbuddy-7b-bf16-enc
-
-### OpenBuddy 13B
-
-- 提供更好的性能和功能
-- 部署和运行需要更强大的硬件
-- Huggingface：预计晚些时候发布
-- 可以申请访问早期版本模型权重：https://forms.gle/tRjvhUQK2jY5e2ND7
+模型的更多信息和下载地址请参阅 [models.md](models.md)。
 
 ## 未来计划
 
