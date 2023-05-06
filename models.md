@@ -13,4 +13,3 @@
 - Requires more powerful hardware for deployment and operation
 - Scheduled for future release
 - Early access applications: https://forms.gle/tRjvhUQK2jY5e2ND7
-

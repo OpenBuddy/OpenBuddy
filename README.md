@@ -12,6 +12,8 @@ Website: [https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub: [https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
+Huggingface: https://huggingface.co/OpenBuddy
+
 ![Demo](media/demo.png)
 
 OpenBuddy is a powerful open-source multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
@@ -41,7 +43,7 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 
 OpenBuddy currently offers two model versions: 7B and 13B.
 
-More information about the model versions and download links can be found in the [models.md](models.md) page.
+More information about downloading the models can be found in the [Models](models.md) page.
 
 ## Future Plans
 
