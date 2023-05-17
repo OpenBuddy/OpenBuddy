@@ -6,11 +6,11 @@
 N_PREDICTS="${N_PREDICTS:-2048}"
 
 # Note: you can also override the generation options by specifying them on the command line:
-GEN_OPTIONS="${GEN_OPTIONS:---ctx_size 2048 --temp 0.7 --top_k 40 --top_p 0.5 --repeat_last_n 256 --batch_size 1024 --repeat_penalty 1.17647}"
+GEN_OPTIONS="${GEN_OPTIONS:---ctx_size 2048 --temp 0.5 --top_k 40 --top_p 0.5 --repeat_last_n 256 --batch_size 1024 --repeat_penalty 1.17647}"
 
 
 
-./main $GEN_OPTIONS \
-    --n_predict "$N_PREDICTS" \
-    --model 7b-q4_0.bin --color --interactive-first \
-    --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f llamacpp.prompt
+./main $GEN_OPTIONS --n_predict "$N_PREDICTS" \
+    --model 7b-q4_0.bin -ngl 1000 \
+    --color --interactive \
+    --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f llamacpp.prompt --keep -1
