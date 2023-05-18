@@ -6,12 +6,12 @@
 
 OpenBuddy 是一个功能强大的开源跨语言对话模型，提供无缝的多语言支持，包括中文、英语和其他语言。
 
-基于 Facebook 的 LLAMA 基础模型，OpenBuddy 已经对词表进行了扩展并提升了 Token Embedding。通过将这些改进与多轮对话数据集相结合，OpenBuddy 提供了一款能够用中文、英文和其它多种语言回答问题并完成翻译等跨语言任务的强大模型。
+基于 Facebook 的 LLaMA 基础模型，OpenBuddy 已经对词表进行了扩展并提升了 Token Embedding。通过将这些改进与多轮对话数据集相结合，OpenBuddy 提供了一款能够用中文、英文和其它多种语言回答问题并完成翻译等跨语言任务的强大模型。
 
 ## 主要特点
 
 - 专注于跨语言能力、创造力的对话型语言模型
-- 基于 Facebook 的 LLAMA 模型构建
+- 基于 Facebook 的 LLaMA 模型构建
 - 扩展词汇表，增加常用CJK字符支持
 - 结合多轮对话数据集进行微调以提高性能
 - 提供两个模型版本：7B 和 13B
@@ -34,7 +34,7 @@ OpenBuddy 目前提供两个模型版本：7B 和 13B。
 
 ## 安装
 
-由于 LLAMA 的许可限制，您需要拥有原版的 LLAMA-7B 模型才能使用此模型。要解密模型权重，请先获取原版的LLAMA-7B模型（不是huggingface版本的），然后使用以下命令：
+由于 LLaMA 的许可限制，您需要拥有原版的 LLaMA-7B 模型才能使用此模型。要解密模型权重，请先获取原版的LLaMA-7B模型（不是huggingface版本的），然后使用以下命令：
 
 ```
 python(3) decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
@@ -44,7 +44,7 @@ python(3) decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 
 7B 模型已转换为 ggml 4-bit 格式，与 llama.cpp 兼容。
 
-模型可在以下位置获取：https://huggingface.co/OpenBuddy/openbuddy-7b-q4_0-enc。
+模型可在以下位置获取：[Models](models.md)，`(4-bit, CPU, llama.cpp)`是针对 llama.cpp 的量化模型。
 
 安装模型和 [llama.cpp](https://github.com/ggerganov/llama.cpp) 后，运行 `chat-llamacpp.bat` 或 `chat-llamacpp.sh` 脚本，即可通过交互式控制台与 OpenBuddy 互动。
 
@@ -69,8 +69,8 @@ OpenBuddy 按照不提供任何明示或暗示的保证的前提下提供。作�
 
 ## 许可限制
 
-OpenBuddy 仅限于非商业的研究目的使用，与 LLAMA 模型的限制相同。严禁任何超出此范围的使用。
+OpenBuddy 仅限于非商业的研究目的使用，与 LLaMA 模型的限制相同。严禁任何超出此范围的使用。
 
 ## 鸣谢
 
-我们要感谢 [AIOS.club](https://github.com/aios-club) 在此项目中提供的宝贵支持与合作。同时，我们感谢 Facebook AI 团队发布了 LLAMA 模型，这为 OpenBuddy 的发展奠定了坚实的基础。最后，我们要感谢开源社区的持续支持与贡献。
+我们要感谢 [AIOS.club](https://github.com/aios-club) 在此项目中提供的宝贵支持与合作。同时，我们感谢 Facebook AI 团队发布了 LLaMA 模型，这为 OpenBuddy 的发展奠定了坚实的基础。最后，我们要感谢开源社区的持续支持与贡献。
