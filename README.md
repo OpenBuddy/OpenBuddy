@@ -16,7 +16,7 @@ Huggingface: https://huggingface.co/OpenBuddy
 
 ![Demo](media/demo.png)
 
-OpenBuddy is a powerful open-source multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
+OpenBuddy is a powerful open multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
 
 Built upon Facebook's LLaMA model, OpenBuddy is fine-tuned to include an extended vocabulary, additional common characters, and enhanced token embeddings. By leveraging these improvements and multi-turn dialogue datasets, OpenBuddy offers a robust model capable of answering questions and performing translation tasks across various languages.
 
@@ -31,7 +31,7 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 
 ## Key Features
 
-- **Multilingual** conversational AI, Chinese, English, Japanese, Korean, French and more!
+- **Multilingual** conversational AI, Chinese, English, Japanese, Korean, French, Germany and more!
 - Built on top of the LLaMA model from Facebook
 - Enhanced vocabulary and support for common CJK characters
 - Fine-tuned with multi-turn dialogue datasets for improved performance
