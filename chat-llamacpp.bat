@@ -19,4 +19,4 @@ if defined N_THREAD (
 main.exe  %GEN_OPTIONS% --n_predict %N_PREDICTS% %_N_THREAD% ^
     --model 7b-q4_0.bin ^
     --color --interactive ^
-    --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f llamacpp.prompt --keep -1 
+    --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f system.prompt --keep -1 
