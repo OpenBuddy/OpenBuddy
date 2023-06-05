@@ -11,6 +11,6 @@ GEN_OPTIONS="${GEN_OPTIONS:---ctx_size 2048 --temp 0.5 --top_k 40 --top_p 0.5 --
 
 
 ./main $GEN_OPTIONS --n_predict "$N_PREDICTS" \
-    --model 7b-q4_0.bin -ngl 1000 \
+    --model 7b-q4_0.bin \
     --color --interactive \
     --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f llamacpp.prompt --keep -1

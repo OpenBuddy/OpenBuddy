@@ -66,28 +66,27 @@ Due to LLaMA licensing restrictions, you need the original LLaMA-7B model to uti
 python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 ```
 
-## Usage with llama.cpp on CPU (Recommended)
+## Usage with llama.cpp on CPU/GPU (Recommended)
 
-The 7B model has been converted to ggml 4-bit format, making it compatible with llama.cpp.
+The 7B model has been converted to ggml format, making it compatible with llama.cpp. llama.cpp is a pure C++ inference engine for LLaMA models, originally designed for CPU deployment.
 
-The model is available at: [Models](models.md), `(4-bit, CPU, llama.cpp)` is the variant you should download.
+After recent updates, llama.cpp now supports cuBLAS and OpenCL acceleration, which means you can utilize your AMD/NVIDIA GPU to accelerate inference.
+
+The model is available at: [Models](models.md), `(5-bit, CPU/GPU, llama.cpp)` is the variant you should download.
 
 After installing the model and [llama.cpp](https://github.com/ggerganov/llama.cpp), you can run the `chat-llamacpp.bat` or `chat-llamacpp.sh` script to interact with OpenBuddy through the interactive console.
 
 ## Usage with Transformers on GPU
 
-Please ensure that your GPU supports bf16 (bfloat16) before attempting to use OpenBuddy with the Huggingface Transformers library on a GPU.
+Please ensure that your GPU supports bf16 (bfloat16) before attempting to use OpenBuddy with the huggingface's `Transformers` library on a GPU. A 7B model may require up to 24GB of GPU memory.
 
-To use OpenBuddy with Transformers on a GPU, follow the example code below:
+To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index).
 
-```Python
-from transformers import LlamaForCausalLM, LlamaTokenizer
-model_path = './openbuddy-7b-bf16-enc'
-model = LlamaForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map="auto") 
-tokenizer = LlamaTokenizer.from_pretrained(model_path)
-```
+## Usage with Inference Frameworks
 
-After loading the OpenBuddy model and tokenizer using the Huggingface Transformers library, you can generate text by using the `generate` method of the model. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index).
+LLM inference frameworks including [Langport](https://github.com/vtuber-plan/langport) and [FastChat](https://github.com/lm-sys/FastChat), have been adapted to support OpenBuddy. Please refer to the respective repositories for more information.
+
+We are actively working on developing our own inference system, [GrandSage](https://github.com/OpenBuddy/GrandSage). GrandSage is currently in the early stages of development.
 
 ## Disclaimer
 
