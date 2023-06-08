@@ -1,13 +1,18 @@
 # Model Downloads
 
-### OpenBuddy 7B
+
+### OpenBuddy-Falcon-7B
+
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-falcon-7b-v1.5-fp16
+
+### OpenBuddy-LLaMA-7B
 
 - GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-7b-ggml
-- Huggingface format (bf16, high-end GPU): https://huggingface.co/OpenBuddy/openbuddy-7b-v1.3-bf16
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-7b-v1.4-bf16
 
-### OpenBuddy 13B
+### OpenBuddy-LLaMA-13B
 
 - Offers improved performance and capabilities
 - Requires more powerful hardware for deployment
 - GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-13b-ggml
-- Huggingface format (fp16, high-end GPU): https://huggingface.co/OpenBuddy/openbuddy-13b-v1.3-fp16
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-13b-v1.3-fp16

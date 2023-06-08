@@ -1,76 +1,119 @@
-# OpenBuddy - 开放的跨语言对话模型
+# OpenBuddy - 面向全球用户的开源多语言聊天机器人
+
+
+<div align="center">
+  <img src="media/logo.png" width="300px">
+</div>
+
 
 [中文](README.zh.md) | [English](README.md)
 
-![Demo](media/demo.png)
+官网：[https://openbuddy.ai](https://openbuddy.ai)
 
-OpenBuddy 是一个功能强大的跨语言对话模型，提供无缝的多语言支持，包括中文、英语和其他语言。
+GitHub：[https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
-基于 Facebook 的 LLaMA 基础模型，OpenBuddy 已经对词表进行了扩展并提升了 Token Embedding。通过将这些改进与多轮对话数据集相结合，OpenBuddy 提供了一款能够用中文、英文和其它多种语言回答问题并完成翻译等跨语言任务的强大模型。
+Huggingface：https://huggingface.co/OpenBuddy
 
-## 主要特点
+![演示](media/demo.png)
 
-- 专注于跨语言能力、创造力的对话型语言模型
-- 基于 Facebook 的 LLaMA 模型构建
-- 扩展词汇表，增加常用CJK字符支持
-- 结合多轮对话数据集进行微调以提高性能
+OpenBuddy 是一款强大的开源多语言聊天机器人模型，面向全球用户，重点强调对话 AI 和无缝多语言支持，包括英语、中文和其他语言。
+
+基于 Tii 的 Falcon 模型和 Facebook 的 LLaMA 模型构建，OpenBuddy 经过微调，包括扩展词汇表、增加常见字符和增强 token 嵌入。通过利用这些改进和多轮对话数据集，OpenBuddy 提供了一个强大的模型，能够回答各种语言的问题并执行翻译任务。
+
+我们的 OpenBuddy 使命是提供一个免费、开源、能够离线运行的 AI 模型，这个模型在用户的设备上运行，不论他们的语言或文化背景如何。我们致力于让全球各地的人们能够接触并从 AI 技术中受益。
+
+## 在线演示
+
+目前，OpenBuddy-13B 的演示版本在我们的 Discord 服务器上可用。请加入我们的 Discord 服务器试用！
+
+Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=blueviolet&label=Discord)](https://discord.gg/6fU2s9cGjA)
+
+## 主要特性
+
+- **多语言**会话 AI，支持中文、英语、日语、韩语、法语、德语等多种语言！
+- 扩展的词汇表和对常见的 CJK 字符的支持
+- 通过多轮对话数据集进行微调以提高性能
 - 提供两个模型版本：7B 和 13B
-- 可以量化为 4 位，使用 llama.cpp 在 CPU 上部署（输出质量略有降低）
-- 持续演进，未来会提供更多功能和改进
+- 通过 llama.cpp 提供对 CPU 部署的 5 位量化（输出质量稍有降低）
+- 积极的开发计划，预期未来的特性和改进
 
 ## 模型版本
 
-OpenBuddy 目前提供两个模型版本：7B 和 13B。
+OpenBuddy 目前提供两个模型系列：Falcon 和 LLaMA。
 
-模型的更多信息和下载地址请参阅 [models.md](models.md)。
+关于下载模型的更多信息可以在 [模型](models.md) 页面找到。
 
 ## 未来计划
 
-- 进一步完善对更多语言的支持
-- 优化量化后的内容质量
-- 建立评估模型的内容质量、安全性、推理能力的机制
-- 尝试人类反馈强化学习（RLHF）
-- 尝试添加针对输入图片开展对话的多模态能力
+- 增强多语言性能
+- 优化模型量化后的质量
+- 开发一个评估内容质量、安全性和推理能力的机制
+- 探索使用人类反馈的强化学习 (RLHF)
+- 探索添加多模态能力，用于有图像上下文的对话
 
 ## 安装
 
-由于 LLaMA 的许可限制，您需要拥有原版的 LLaMA-7B 模型才能使用此模型。要解密模型权重，请先获取原版的LLaMA-7B模型（不是huggingface版本的），然后使用以下命令：
+对于 `OpenBuddy-LLaMA` 系列模型，由于 LLaMA 许可证的限制，您需要原始的 LLaMA-7B 模型才能使用此模型。解密模型权重的步骤如下：
+
+1. 获取原始的 LLaMA-7B 模型（非 Huggingface 版本）。
+2. 克隆此 GitHub 仓库。
+3. 确保您已经安装了 Python 3.7 或更高版本以及 numpy，可以通过 `pip install numpy` 命令安装 numpy。
+4. 运行以下命令，如果 python 不起作用，尝试 python3：
 
 ```
-python(3) decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
+python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 ```
 
-## 使用 llama.cpp 在 CPU 上运行（推荐）
+对于 `OpenBuddy-Falcon` 系列模型，您可以直接从 Huggingface 下载模型并开始使用，无需解密！
 
-7B 模型已转换为 ggml 4-bit 格式，与 llama.cpp 兼容。
+## 在 CPU/GPU 上基于 llama.cpp 部署(推荐)
 
-模型可在以下位置获取：[Models](models.md)，`(4-bit, CPU, llama.cpp)`是针对 llama.cpp 的量化模型。
+7B 模型已被转换为 ggml 格式，使其兼容 llama.cpp。llama.cpp 是一个用于 LLaMA 模型的纯 C++ 推理引擎，原本设计用于 CPU 部署。
 
-安装模型和 [llama.cpp](https://github.com/ggerganov/llama.cpp) 后，运行 `chat-llamacpp.bat` 或 `chat-llamacpp.sh` 脚本，即可通过交互式控制台与 OpenBuddy 互动。
+经过最近的更新，llama.cpp 现在支持 cuBLAS 和 OpenCL 加速，这意味着您可以利用您的 AMD/NVIDIA GPU 来加速推理。
 
-## 在 GPU 上使用 Transformers 运行
+模型可以在 [模型](models.md) 页面找到，`(5-bit, CPU/GPU, llama.cpp)` 是你应该下载的版本。
 
-首先，请确保 GPU 支持 bf16（bfloat16）格式。
+安装模型和 [llama.cpp](https://github.com/ggerganov/llama.cpp) 后，你可以运行 `chat-llamacpp.bat` 或 `chat-llamacpp.sh` 脚本在交互式控制台与 OpenBuddy 进行交互。
 
-要在 GPU 上使用 OpenBuddy，请参考以下示例代码：
+目前，只有 OpenBuddy-LLaMA 系列模型被 llama.cpp 支持，llama.cpp 的开发者正在努力为 Falcon 模型添加支持。
 
-```Python
-from transformers import LlamaForCausalLM, LlamaTokenizer
-model_path = './openbuddy-7b-bf16-enc'
-model = LlamaForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map="auto") 
-tokenizer = LlamaTokenizer.from_pretrained(model_path)
-```
+## 在高端 GPU 上基于 Transformers 部署
 
-使用 Huggingface Transformers 库加载 OpenBuddy 模型和 tokenizer 后，可以通过模型的 generate 方法生成文本。要更全面地了解文本生成，请参阅 Transformers 文档。
+要在 GPU 上使用 huggingface 的 Transformers 库与 OpenBuddy，按照 [hello.py](examples/hello.py) 示例进行操作。对于文本生成的更全面理解，请参考 [Transformers 文档](https://huggingface.co/docs/transformers/index)。7B 模型可能需要多达 24GB 的 GPU 内存。
+
+## 使用推理框架
+
+LLM 推理框架，包括 [Langport](https://github.com/vtuber-plan/langport) 和 [FastChat](https://github.com/lm-sys/FastChat)，已经被适配以支持 OpenBuddy。请参考各自的仓库获取更多信息。
+
+我们正在积极开发我们自己的推理系统 [GrandSage](https://github.com/OpenBuddy/GrandSage)。GrandSage 目前处于开发的早期阶段。
 
 ## 免责声明
 
-OpenBuddy 按照不提供任何明示或暗示的保证的前提下提供。作者和贡献者不对因使用或无法使用本软件而产生的任何损害承担责任。使用 OpenBuddy 即表示您同意这些条款和条件。
+所有 OpenBuddy 模型都有固有的限制，可能会产生错误的、有害的、冒犯性的或其他不希望的输出。用户不应在可能导致人身伤害、财产损失或重大损失的关键或高风险情况下使用这些模型。这些情况的例子包括但不限于医疗领域、可能导致伤害的软硬件系统控制，以及进行重要的财务或法律决策。
 
-## 许可限制
+OpenBuddy 是以 "原样" 提供的，没有任何形式的保证，包括但不限于适销性、特定用途的适用性以及非侵权的暗示保证。在任何情况下，作者、贡献者或版权所有者都不应对任何索赔、损害或其他责任负责，无论是在合同、侵权或其他行为中，都与软件或使用或其他处理软件有关。
 
-OpenBuddy 仅限于非商业的研究目的使用，与 LLaMA 模型的限制相同。严禁任何超出此范围的使用。
+通过使用 OpenBuddy，您同意这些条款和条件，并承认您理解与其使用相关的潜在风险。您还同意赔偿并使作者、贡献者和版权所有者免受由于您使用 OpenBuddy 而产生的任何索赔、损害或责任的影响。
 
-## 鸣谢
+## 许可证限制
 
-我们要感谢 [AIOS.club](https://github.com/aios-club) 在此项目中提供的宝贵支持与合作。同时，我们感谢 Facebook AI 团队发布了 LLaMA 模型，这为 OpenBuddy 的发展奠定了坚实的基础。最后，我们要感谢开源社区的持续支持与贡献。
+OpenBuddy-LLaMA 系列模型严格禁止商业使用，仅供研究目的使用。有关更多信息，请参阅 LLaMA 许可证。
+
+对于 OpenBuddy-Falcon 系列模型，它们根据 Apache 2.0 许可证发布。请参阅 Apache 2.0 许可证以获取适用范围和限制。
+
+关于 OpenBuddy 开源项目相关的源代码（包括但不限于测试代码和 GrandSage 推理项目），它们根据 GPL 3.0 许可证发布。
+
+## 致谢
+
+我们深深感谢开源社区对 OpenBuddy 项目的无私帮助和贡献。
+
+首先，我们尤其要感谢威科软件，在模型训练方面提供了强大的支持和帮助。
+
+感谢[苏剑林](https://kexue.fm/)先生在模型训练过程中给出了宝贵的建议，他不仅提供了专业的建议，而且还提出了 NBCE 方法，这使得 OpenBuddy 等开源模型能够支持10K超长上下文的推理，对我们的工作产生了深远影响。
+
+我们要向[飞雪无情](https://www.flysnow.org/about/)和[jstzwj](https://github.com/jstzwj)表达我们的谢意，他们在模型开发的早期阶段为我们提供了宝贵的建议，而且在模型推理方面提供了大力的支持和帮助。
+
+同时，我们也要感谢 camera 等开放语言模型的爱好者，他们的建议对模型的改进起到了重要的推动作用。
+
+再次感谢所有对 OpenBuddy 项目有所贡献的每一个人，我们的成功离不开你们的支持和鼓励。此外，我们还感谢 Tii 和 Facebook，它们分别推出的 Falcon 模型和 LLaMA 模型，为我们的项目打下了坚实的基础。

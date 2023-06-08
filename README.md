@@ -18,7 +18,7 @@ Huggingface: https://huggingface.co/OpenBuddy
 
 OpenBuddy is a powerful open multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
 
-Built upon Facebook's LLaMA model, OpenBuddy is fine-tuned to include an extended vocabulary, additional common characters, and enhanced token embeddings. By leveraging these improvements and multi-turn dialogue datasets, OpenBuddy offers a robust model capable of answering questions and performing translation tasks across various languages.
+Built upon Tii's Falcon model and Facebook's LLaMA model, OpenBuddy is fine-tuned to include an extended vocabulary, additional common characters, and enhanced token embeddings. By leveraging these improvements and multi-turn dialogue datasets, OpenBuddy offers a robust model capable of answering questions and performing translation tasks across various languages.
 
 Our mission with OpenBuddy is to provide a free, open, and offline-capable AI model that operates on users' devices, irrespective of their language or cultural background. We strive to empower individuals worldwide to access and benefit from AI technology.
 
@@ -32,7 +32,6 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 ## Key Features
 
 - **Multilingual** conversational AI, Chinese, English, Japanese, Korean, French, Germany and more!
-- Built on top of the LLaMA model from Facebook
 - Enhanced vocabulary and support for common CJK characters
 - Fine-tuned with multi-turn dialogue datasets for improved performance
 - Two model versions: 7B and 13B
@@ -55,7 +54,7 @@ More information about downloading the models can be found in the [Models](model
 
 ## Installation
 
-Due to LLaMA licensing restrictions, you need the original LLaMA-7B model to utilize this model. To decrypt the model weights:
+For `OpenBuddy-LLaMA` series models, due to LLaMA licensing restrictions, you need the original LLaMA-7B model to utilize this model. To decrypt the model weights:
 
 1. Acquire the original LLaMA-7B model (not the Huggingface version).
 2. Clone this GitHub repository.
@@ -65,6 +64,8 @@ Due to LLaMA licensing restrictions, you need the original LLaMA-7B model to uti
 ```
 python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 ```
+
+For `OpenBuddy-Falcon` series models, you can directly download the model from Huggingface and enjoy it!
 
 ## Usage with llama.cpp on CPU/GPU (Recommended)
 
@@ -76,11 +77,11 @@ The model is available at: [Models](models.md), `(5-bit, CPU/GPU, llama.cpp)` is
 
 After installing the model and [llama.cpp](https://github.com/ggerganov/llama.cpp), you can run the `chat-llamacpp.bat` or `chat-llamacpp.sh` script to interact with OpenBuddy through the interactive console.
 
-## Usage with Transformers on GPU
+For now, only OpenBuddy-LLaMA series models are supported by llama.cpp, the developers of llama.cpp are working on adding support for Falcon models.
 
-Please ensure that your GPU supports bf16 (bfloat16) before attempting to use OpenBuddy with the huggingface's `Transformers` library on a GPU. A 7B model may require up to 24GB of GPU memory.
+## Usage with Transformers on a high-end GPU
 
-To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index).
+To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). A 7B model may require up to 24GB of GPU memory.
 
 ## Usage with Inference Frameworks
 
@@ -106,4 +107,14 @@ Regarding the source code related to the OpenBuddy open-source project (includin
 
 ## Acknowledgements
 
-We want to thank [AIOS.club](https://github.com/aios-club) for their invaluable support and collaboration in this project. Our appreciation extends to the Facebook AI team for releasing the LLaMA model, which has served as a solid foundation for OpenBuddy's development. Finally, we extend our thanks to the open-source community for their continued support and contributions.
+We extend our deepest gratitude to the open-source community for their selfless assistance and contributions to the OpenBuddy project.
+
+Firstly, we would like to specifically thank WeiKe Software for their robust support and help in the aspect of model training.
+
+We owe our thanks to [Mr. Su Jianlin](https://kexue.fm/) for providing invaluable advice during the model training process. Not only did he provide professional advice, but he also introduced the NBCE method, which enables open-source models like OpenBuddy to support inference with a super-long context of 10K. This has had a profound impact on our work.
+
+Our appreciation goes to [Feixue Wuqing](https://www.flysnow.org/about/) and [jstzwj](https://github.com/jstzwj). They provided valuable advice during the early stages of model development and extended substantial support and assistance in model inference.
+
+At the same time, we also wish to express our gratitude to camera and other enthusiasts of open language models. Their suggestions played a pivotal role in improving the model.
+
+Once again, we thank everyone who has contributed to the OpenBuddy project. Our success is inseparable from your support and encouragement. Moreover, we acknowledge Tii and Facebook for introducing the Falcon model and the LLaMA model, respectively, which have laid a solid foundation for our project.
