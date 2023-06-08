@@ -90,11 +90,19 @@ We are actively working on developing our own inference system, [GrandSage](http
 
 ## Disclaimer
 
-OpenBuddy is provided as-is without any warranty of any kind, either express or implied. The authors and contributors shall not be held liable for any damages resulting from the use or inability to use this software. By using OpenBuddy, you agree to these terms and conditions.
+All OpenBuddy models have inherent limitations and may potentially produce outputs that are erroneous, harmful, offensive, or otherwise undesirable. Users should not use these models in critical or high-stakes situations that may lead to personal injury, property damage, or significant losses. Examples of such scenarios include, but are not limited to, the medical field, controlling software and hardware systems that may cause harm, and making important financial or legal decisions.
+
+OpenBuddy is provided "as-is" without any warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors, contributors, or copyright holders be liable for any claim, damages, or other liabilities, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+By using OpenBuddy, you agree to these terms and conditions, and acknowledge that you understand the potential risks associated with its use. You also agree to indemnify and hold harmless the authors, contributors, and copyright holders from any claims, damages, or liabilities arising from your use of OpenBuddy.
 
 ## License Restrictions
 
-OpenBuddy is intended for non-commercial research purposes only, following the same restrictions as the LLaMA model. Any use outside of this scope is strictly prohibited. For more information, please refer to the LLaMA license.
+OpenBuddy-LLaMA series models are strictly prohibited for commercial use and are intended for research purposes only. For more information, please refer to the LLaMA License.
+
+For the OpenBuddy-Falcon series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
+
+Regarding the source code related to the OpenBuddy open-source project (including, but not limited to, test code and the GrandSage Inference project), they are released under the GPL 3.0 License.
 
 ## Acknowledgements
 
