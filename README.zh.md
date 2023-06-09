@@ -8,11 +8,17 @@
 
 [中文](README.zh.md) | [English](README.md)
 
+WeChat: 
+
+<img src="media/wechat.jpg" width="200px">
+
 官网：[https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub：[https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
 Huggingface：https://huggingface.co/OpenBuddy
+
+
 
 ![演示](media/demo.png)
 
