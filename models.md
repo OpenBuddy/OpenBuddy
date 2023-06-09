@@ -3,7 +3,7 @@
 
 ### OpenBuddy-Falcon-7B
 
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-falcon-7b-v1.5-fp16
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-falcon-7b-v5-fp16
 
 ### OpenBuddy-LLaMA-7B
 
