@@ -1,9 +1,10 @@
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_path = './openbuddy-7b-v1.3-bf16'
-model = LlamaForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map="auto") 
-tokenizer = LlamaTokenizer.from_pretrained(model_path)
+# You need to download the model into the `examples` directory
+model_path = './openbuddy-falcon-7b-v1.5-fp16/'
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 with open('../system.prompt', 'r', encoding='utf-8') as f:
     prompt = f.read()
