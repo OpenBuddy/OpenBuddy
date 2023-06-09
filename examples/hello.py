@@ -11,5 +11,5 @@ with open('../system.prompt', 'r', encoding='utf-8') as f:
 
 prompt += "\n\nUser: Write a poem about yourself.\nAssistant:"
 input_ids = tokenizer.encode(prompt, return_tensors='pt')
-output_ids = model.generate(input_ids, max_length=100)
+output_ids = model.generate(input_ids, max_new_tokens=100)
 print(tokenizer.decode(output_ids[0], skip_special_tokens=True))
