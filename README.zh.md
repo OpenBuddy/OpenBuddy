@@ -8,9 +8,15 @@
 
 [中文](README.zh.md) | [English](README.md)
 
-WeChat: 
+**官方微信公众号、微信群: **
 
-<img src="media/wechat.jpg" width="200px">
+欢迎关注我们的官方公众号！我们会第一时间同步研究进展和有意思的应用案例。
+
+在公众号发送“加群”，既可获得微信群邀请。
+
+<img src="media/mp.jpg">
+
+
 
 官网：[https://openbuddy.ai](https://openbuddy.ai)
 
