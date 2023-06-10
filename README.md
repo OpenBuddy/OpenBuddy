@@ -8,6 +8,8 @@
 
 [中文](README.zh.md) | [English](README.md)
 
+微信公众号、微信群：搜索“**开源智友**”，关注公众号并发送“加群”
+
 Website: [https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub: [https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
