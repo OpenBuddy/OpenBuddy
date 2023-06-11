@@ -41,7 +41,7 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 - **Multilingual** conversational AI, Chinese, English, Japanese, Korean, French, Germany and more!
 - Enhanced vocabulary and support for common CJK characters
 - Fine-tuned with multi-turn dialogue datasets for improved performance
-- Two model versions: 7B and 13B
+- Three model versions: 7B, 13B, and 30B!
 - 4-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
 - Active development plans for future features and improvements
 
