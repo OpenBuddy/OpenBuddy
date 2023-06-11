@@ -8,7 +8,12 @@
 
 [中文](README.zh.md) | [English](README.md)
 
-微信公众号、微信群：搜索“**开源智友**”，关注公众号并发送“加群”
+微信公众号、微信群：
+
+<img src="media/mp.jpg" width="285">
+
+搜索“**开源智友**”，关注公众号并发送“加群”即可获得微信群邀请、参与新模型内测等活动
+
 
 Website: [https://openbuddy.ai](https://openbuddy.ai)
 
