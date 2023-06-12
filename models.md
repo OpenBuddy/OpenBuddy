@@ -8,7 +8,7 @@
 ### OpenBuddy-LLaMA-7B
 
 - GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-7b-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-7b-v1.4-bf16
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-7b-v1.4-fp16
 
 ### OpenBuddy-LLaMA-13B
 

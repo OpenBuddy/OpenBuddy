@@ -120,7 +120,7 @@ Firstly, we would like to specifically thank WeiKe Software for their robust sup
 
 We owe our thanks to [Mr. Su Jianlin](https://kexue.fm/) for providing invaluable advice during the model training process. Not only did he provide professional advice, but he also introduced the NBCE method, which enables open-source models like OpenBuddy to support inference with a super-long context of 10K. This has had a profound impact on our work.
 
-Our appreciation goes to [Feixue Wuqing](https://www.flysnow.org/about/) and [jstzwj](https://github.com/jstzwj). They provided valuable advice during the early stages of model development and extended substantial support and assistance in model inference.
+Our appreciation goes to [flysnow](https://www.flysnow.org/about/) and [jstzwj](https://github.com/jstzwj). They provided valuable advice during the early stages of model development and extended substantial support and assistance in model inference.
 
 At the same time, we also wish to express our gratitude to camera and other enthusiasts of open language models. Their suggestions played a pivotal role in improving the model.
 
