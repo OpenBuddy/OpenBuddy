@@ -116,7 +116,7 @@ Regarding the source code related to the OpenBuddy open-source project (includin
 
 We extend our deepest gratitude to the open-source community for their selfless assistance and contributions to the OpenBuddy project.
 
-Firstly, we would like to specifically thank WeiKe Software for their robust support and help in the aspect of model training.
+Firstly, we would like to specifically thank WeiKe Software for their robust support and help in the aspect of model training. We also want to thank [AIOS.club](https://github.com/aios-club) for their invaluable support.
 
 We owe our thanks to [Mr. Su Jianlin](https://kexue.fm/) for providing invaluable advice during the model training process. Not only did he provide professional advice, but he also introduced the NBCE method, which enables open-source models like OpenBuddy to support inference with a super-long context of 10K. This has had a profound impact on our work.
 
