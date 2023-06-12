@@ -17,6 +17,6 @@ if defined N_THREAD (
 
 
 main.exe  %GEN_OPTIONS% --n_predict %N_PREDICTS% %_N_THREAD% ^
-    --model 7b-q4_0.bin ^
+    --model 7b-v1.3-q5_1.bin ^
     --color --interactive ^
     --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f system.prompt --keep -1 
