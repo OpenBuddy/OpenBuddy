@@ -7,16 +7,15 @@
 
 ### OpenBuddy-LLaMA-7B
 
-- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-7b-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-7b-v1.4-fp16
+- GGML format (3/5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-llama-ggml
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-7b-v4-fp16
 
 ### OpenBuddy-LLaMA-13B
 
 - Offers improved performance and capabilities
 - Requires more powerful hardware for deployment
-- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-13b-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-13b-v1.3-fp16
-
+- GGML format (3/5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-llama-ggml
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-13b-v5-fp16
 
 ### OpenBuddy-LLaMA-30B
 
