@@ -108,7 +108,7 @@ By using OpenBuddy, you agree to these terms and conditions, and acknowledge tha
 
 OpenBuddy-LLaMA series models are strictly prohibited for commercial use and are intended for research purposes only. For more information, please refer to the LLaMA License.
 
-For the OpenBuddy-Falcon series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
+For the OpenBuddy-Falcon and OpenBuddy-OpenLLaMA series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
 
 Regarding the source code related to the OpenBuddy open-source project (including, but not limited to, test code and the GrandSage Inference project), they are released under the GPL 3.0 License.
 

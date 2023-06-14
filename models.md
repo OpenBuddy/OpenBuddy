@@ -1,5 +1,9 @@
 # Model Downloads
 
+### OpenBuddy-OpenLLaMA-7B
+
+- GGML format (3/5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-openllama-7b-v5-fp16
 
 ### OpenBuddy-Falcon-7B
 
