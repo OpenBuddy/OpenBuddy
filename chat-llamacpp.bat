@@ -1,5 +1,5 @@
 REM Please download llama.cpp executable from: https://github.com/ggerganov/llama.cpp/releases
-
+REM Please download the model from: https://huggingface.co/OpenBuddy/openbuddy-ggml
 
 rem Number of tokens to predict (made it larger than default because we want a long interaction)
 if not defined N_PREDICTS set "N_PREDICTS=2048"
@@ -17,6 +17,6 @@ if defined N_THREAD (
 
 
 main.exe  %GEN_OPTIONS% --n_predict %N_PREDICTS% %_N_THREAD% ^
-    --model llama-7b-v4-q3_K.bin ^
+    --model openllama-7b-v5-q3_K.bin ^
     --color --interactive ^
     --reverse-prompt "User:"  --in-prefix " " --in-suffix "Assistant:" -f system.prompt --keep -1 
