@@ -1,7 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_path = 'OpenBuddy/openbuddy-falcon-7b-v5-fp16'
+model_path = 'OpenBuddy/openbuddy-openllama-7b-v5-fp16'
 model = AutoModelForCausalLM.from_pretrained(
     model_path, 
     device_map="auto", 
