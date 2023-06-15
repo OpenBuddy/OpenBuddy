@@ -111,7 +111,7 @@ OpenBuddy按“原样”提供，不附带任何种类的明示或暗示的保�
 
 OpenBuddy-LLaMA 系列模型严格禁止商业使用，仅供研究目的使用。有关更多信息，请参阅 LLaMA 许可证。
 
-对于 OpenBuddy-Falcon 系列模型，它们根据 Apache 2.0 许可证发布。请参阅 Apache 2.0 许可证以获取适用范围和限制。
+对于 OpenBuddy-Falcon、OpenBuddy-OpenLLaMA 系列模型，它们根据 Apache 2.0 许可证发布。请参阅 Apache 2.0 许可证以获取适用范围和限制。
 
 关于 OpenBuddy 开源项目相关的源代码（包括但不限于测试代码和 GrandSage 推理项目），它们根据 GPL 3.0 许可证发布。
 
