@@ -25,5 +25,4 @@
 
 - Outstanding performance and capabilities
 - Beats ChatGPT-3.5 in double-blind tests
-- Demo available on Discord
-- Weights coming soon
+- Available for early access: https://huggingface.co/OpenBuddyEA
