@@ -109,7 +109,7 @@ OpenBuddy按“原样”提供，不附带任何种类的明示或暗示的保�
 
 ## 许可证限制
 
-OpenBuddy-LLaMA 系列模型严格禁止商业使用，仅供研究目的使用。有关更多信息，请参阅 LLaMA 许可证。
+OpenBuddy-LLaMA系列模型受Meta的许可协议限制。这些模型仅供已获得Meta批准、有资格下载LLaMA的个人使用。如果您尚未获得Meta的批准，您必须访问 https://ai.meta.com/llama/ 页面，阅读并同意模型的许可协议，提交申请，并等待Meta批准后才能从页面下载模型。
 
 对于 OpenBuddy-Falcon、OpenBuddy-OpenLLaMA 系列模型，它们根据 Apache 2.0 许可证发布。请参阅 Apache 2.0 许可证以获取适用范围和限制。
 

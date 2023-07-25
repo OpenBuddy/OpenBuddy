@@ -106,7 +106,7 @@ By using OpenBuddy, you agree to these terms and conditions, and acknowledge tha
 
 ## License Restrictions
 
-OpenBuddy-LLaMA series models are strictly prohibited for commercial use and are intended for research purposes only. For more information, please refer to the LLaMA License.
+OpenBuddy-LLaMA series models are subject to Meta's licensing agreement. These models are intended for use only by individuals who have obtained approval from Meta and are eligible to download LLaMA. If you have not obtained approval from Meta, you must visit the https://ai.meta.com/llama/ page, read and agree to the model's licensing agreement, submit an application, and wait for approval from Meta before downloading the model from the model page.
 
 For the OpenBuddy-Falcon and OpenBuddy-OpenLLaMA series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
 

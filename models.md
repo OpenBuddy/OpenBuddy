@@ -19,7 +19,7 @@
 - Offers improved performance and capabilities
 - Requires more powerful hardware for deployment
 - GGML format (3/5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-llama-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-13b-v5-fp16
+- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama2-13b-v8.1-fp16
 
 ### OpenBuddy-LLaMA-30B
 
