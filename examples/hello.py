@@ -1,13 +1,15 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_path = 'OpenBuddy/openbuddy-openllama-7b-v5-fp16'
+model_path = 'OpenBuddy/openbuddy-llama2-13b-v8.1-fp16'
 model = AutoModelForCausalLM.from_pretrained(
     model_path, 
     device_map="auto", 
     trust_remote_code=True, 
     torch_dtype=torch.float16)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+model.eval()
 
 with open('../system.prompt', 'r', encoding='utf-8') as f:
     prompt = f.read()

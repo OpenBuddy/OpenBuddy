@@ -79,11 +79,11 @@ python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 
 ## 在 CPU/GPU 上基于 llama.cpp 部署(推荐)
 
-7B 模型已被转换为 ggml 格式，使其兼容 llama.cpp。llama.cpp 是一个用于 LLaMA 模型的纯 C++ 推理引擎，原本设计用于 CPU 部署。
+部分模型已被转换为 ggml 格式，使其兼容 llama.cpp。llama.cpp 是一个用于 LLaMA 模型的纯 C++ 推理引擎，原本设计用于 CPU 部署。
 
 经过最近的更新，llama.cpp 现在支持 cuBLAS 和 OpenCL 加速，这意味着您可以利用您的 AMD/NVIDIA GPU 来加速推理。
 
-模型可以在 [模型](models.md) 页面找到，`(5-bit, CPU/GPU, llama.cpp)` 是你应该下载的版本。
+模型可以在 [模型](models.md) 页面找到，`GGML format` 是你应该下载的版本。
 
 安装模型和 [llama.cpp](https://github.com/ggerganov/llama.cpp) 后，你可以运行 `chat-llamacpp.bat` 或 `chat-llamacpp.sh` 脚本在交互式控制台与 OpenBuddy 进行交互。
 

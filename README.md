@@ -76,11 +76,11 @@ For `OpenBuddy-Falcon` series models, you can directly download the model from H
 
 ## Usage with llama.cpp on CPU/GPU (Recommended)
 
-The 7B model has been converted to ggml format, making it compatible with llama.cpp. llama.cpp is a pure C++ inference engine for LLaMA models, originally designed for CPU deployment.
+Models have been converted to ggml format, making it compatible with llama.cpp. llama.cpp is a pure C++ inference engine for LLaMA models, originally designed for CPU deployment.
 
 After recent updates, llama.cpp now supports cuBLAS and OpenCL acceleration, which means you can utilize your AMD/NVIDIA GPU to accelerate inference.
 
-The model is available at: [Models](models.md), `(5-bit, CPU/GPU, llama.cpp)` is the variant you should download.
+The model is available at: [Models](models.md), `GGML format` is the variant you should download.
 
 After installing the model and [llama.cpp](https://github.com/ggerganov/llama.cpp), you can run the `chat-llamacpp.bat` or `chat-llamacpp.sh` script to interact with OpenBuddy through the interactive console.
 
