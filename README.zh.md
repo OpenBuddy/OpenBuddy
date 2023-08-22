@@ -35,7 +35,7 @@ OpenBuddy 是一款强大的开源多语言聊天机器人模型，面向全球�
 
 ## 在线演示
 
-目前，OpenBuddy-13B 的演示版本在我们的 Discord 服务器上可用。请加入我们的 Discord 服务器试用！
+目前，OpenBuddy-70B 的演示版本在我们的 Discord 服务器上可用。请加入我们的 Discord 服务器试用！
 
 Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=blueviolet&label=Discord)](https://discord.gg/6fU2s9cGjA)
 
@@ -44,7 +44,7 @@ Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=b
 - **多语言**会话 AI，支持中文、英语、日语、韩语、法语、德语等多种语言！
 - 扩展的词汇表和对常见的 CJK 字符的支持
 - 通过多轮对话数据集进行微调以提高性能
-- 提供多种模型版本：7B、13B、30B
+- 提供多种模型大小，适用于不同的应用场景和需求：3B, 7B, 13B, 30B, 40B, 65B, 70B
 - 通过 llama.cpp 提供对 CPU 部署的 5 位量化（输出质量稍有降低）
 - 积极的开发计划，预期未来的特性和改进
 

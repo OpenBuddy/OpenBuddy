@@ -1,6 +1,32 @@
 # Model Downloads
 
-### OpenBuddy-LLaMA2-13B (Recommended)
+### ModelScope 中文社区
+
+欢迎访问我们的 ModelScope 中文社区，体验一部分热门模型的国内高速下载和一键部署！
+
+https://modelscope.cn/organization/OpenBuddy
+
+### OpenBuddy-OpenLLaMA-3B
+
+- Tiny model, good for CPU/Mobile inference
+- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
+- Huggingface: https://huggingface.co/OpenBuddy/openbuddy-openllama-3b-v10-bf16
+
+### OpenBuddy-Atom-13B
+
+- Optimized for Chinese writing/reading tasks
+- Math performance is not as good as other models, for now
+- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
+- Huggingface format (High-end GPU, 32GB+ VRAM required): https://huggingface.co/OpenBuddy/openbuddy-atom-13b-v9-bf16
+
+### OpenBuddy-Falcon-40B
+
+- Similar capabilities to LLaMA-30B/65B, with Apache 2.0 license
+- Dataset is more diverse than LLaMA
+- GGML format (3-bit, CPU/GPU, [ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp) ): https://huggingface.co/OpenBuddy/openbuddy-ggml
+- Huggingface format (High-end GPU, 96GB+ VRAM required): https://huggingface.co/OpenBuddy/openbuddy-falcon-40b-v9-bf16
+
+### OpenBuddy-LLaMA2-13B
 
 - Recommended for most use cases!
 - Offers improved performance and capabilities over LLaMA1

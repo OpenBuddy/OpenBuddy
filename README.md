@@ -31,7 +31,7 @@ Our mission with OpenBuddy is to provide a free, open, and offline-capable AI mo
 
 ## Online Demo
 
-Currently, the OpenBuddy-13B demo is available on our Discord server. Please join our Discord server to try it out!
+Currently, the OpenBuddy-70B demo is available on our Discord server. Please join our Discord server to try it out!
 
 Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=blueviolet&label=Discord)](https://discord.gg/6fU2s9cGjA)
 
@@ -41,8 +41,8 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 - **Multilingual** conversational AI, Chinese, English, Japanese, Korean, French, Germany and more!
 - Enhanced vocabulary and support for common CJK characters
 - Fine-tuned with multi-turn dialogue datasets for improved performance
-- Three model versions: 7B, 13B, and 30B!
-- 4-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
+- Various model sizes to suit your needs: 3B, 7B, 13B, 30B, 40B, 65B, 70B and more!
+- 4/5-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
 - Active development plans for future features and improvements
 
 ## Model Versions
