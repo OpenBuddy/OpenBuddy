@@ -19,7 +19,7 @@ Website: [https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub: [https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
-Huggingface: https://huggingface.co/OpenBuddy
+Hugging Face: https://huggingface.co/OpenBuddy
 
 ![Demo](media/demo.png)
 
@@ -63,7 +63,7 @@ More information about downloading the models can be found in the [Models](model
 
 For `OpenBuddy-LLaMA` series models, due to LLaMA licensing restrictions, you need the original LLaMA-7B model to utilize this model. To decrypt the model weights:
 
-1. Acquire the original LLaMA-7B model (not the Huggingface version).
+1. Acquire the original LLaMA-7B model (not the Hugging Face version).
 2. Clone this GitHub repository.
 3. Ensure that you have Python 3.7 or higher and numpy installed, you can install numpy with `pip install numpy`.
 4. Run the following command, try python3 if python does not work:
@@ -72,7 +72,7 @@ For `OpenBuddy-LLaMA` series models, due to LLaMA licensing restrictions, you ne
 python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 ```
 
-For `OpenBuddy-Falcon` series models, you can directly download the model from Huggingface and enjoy it!
+For `OpenBuddy-Falcon` series models, you can directly download the model from Hugging Face and enjoy it!
 
 ## Usage with llama.cpp on CPU/GPU (Recommended)
 
@@ -88,7 +88,7 @@ For now, only OpenBuddy-LLaMA series models are supported by llama.cpp, the deve
 
 ## Usage with Transformers on a high-end GPU
 
-To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). A 7B model may require up to 24GB of GPU memory.
+To use OpenBuddy with Hugging Face's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). A 7B model may require up to 24GB of GPU memory.
 
 ## Usage with Inference Frameworks
 
