@@ -25,11 +25,13 @@ OpenBuddy-Llemma-34B: https://huggingface.co/OpenBuddy/openbuddy-llemma-34b-v13.
 - This model excels in logical reasoning, understanding, and coding capabilities.
 
 
-### GGUF Format
+### GGUF/GPT-Q/AWQ quantized models
 
-GGUF is a streamlined model format utilized by [llama.cpp](https://github.com/ggerganov/llama.cpp), a C++ inference engine tailored for personal-level CPU/GPU implementation.
+GGUF is a model format utilized by [llama.cpp](https://github.com/ggerganov/llama.cpp), a C++ inference engine tailored for personal-level CPU/GPU implementation.
 
-TheBloke offers GGUF quantized versions of the OpenBuddy models, available here: [link](https://huggingface.co/TheBloke?search_models=openbuddy)
+TheBloke offers GGUF/GPT-Q/AWQ quantized versions of the OpenBuddy models, available here: [link](https://huggingface.co/TheBloke?search_models=openbuddy)
+
+Please note, the quality of the GPT-Q and AWQ quantized models depends on the text data used during quantization. We recommend quantizing the models with your own data when quality is critical in your application.
 
 ### More Models
 
