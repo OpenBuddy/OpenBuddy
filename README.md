@@ -42,12 +42,12 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 - Enhanced vocabulary and support for common CJK characters
 - Fine-tuned with multi-turn dialogue datasets for improved performance
 - Various model sizes to suit your needs: 3B, 7B, 13B, 30B, 40B, 65B, 70B and more!
-- 4/5-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
+- 3/4/5-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
 - Active development plans for future features and improvements
 
-## Model Versions
+## Model Download
 
-OpenBuddy currently offers two model versions: 7B and 13B.
+OpenBuddy currently offers model downloads on HuggingFace and ModelScope.
 
 More information about downloading the models can be found in the [Models](models.md) page.
 

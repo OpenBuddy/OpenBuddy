@@ -2,57 +2,37 @@
 
 ### ModelScope 中文社区
 
-欢迎访问我们的 ModelScope 中文社区，体验一部分热门模型的国内高速下载和一键部署！
+欢迎访问我们的 ModelScope 中文社区，体验热门模型的国内高速下载和一键部署！
 
 https://modelscope.cn/organization/OpenBuddy
 
-### OpenBuddy-OpenLLaMA-3B
+### Suggested Models (HuggingFace format)
 
-- Tiny model, good for CPU/Mobile inference
-- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
-- Huggingface: https://huggingface.co/OpenBuddy/openbuddy-openllama-3b-v10-bf16
+OpenBuddy-Mistral-7B: https://huggingface.co/OpenBuddy/openbuddy-mistral-7b-v13.1
 
-### OpenBuddy-Atom-13B
+- This model exhibits a powerful comprehension capability, and its performance approaches that of our 34B model in certain tasks.
 
-- Optimized for Chinese writing/reading tasks
-- Math performance is not as good as other models, for now
-- GGML format (5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
-- Huggingface format (High-end GPU, 32GB+ VRAM required): https://huggingface.co/OpenBuddy/openbuddy-atom-13b-v9-bf16
+OpenBuddy-StableLM-3B: https://huggingface.co/OpenBuddy/openbuddy-stablelm-3b-v13
 
-### OpenBuddy-Falcon-40B
+- This is the most compact model that still maintains satisfactory language understanding, although its knowledge is somewhat limited
 
-- Similar capabilities to LLaMA-30B/65B, with Apache 2.0 license
-- Dataset is more diverse than LLaMA
-- GGML format (3-bit, CPU/GPU, [ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp) ): https://huggingface.co/OpenBuddy/openbuddy-ggml
-- Huggingface format (High-end GPU, 96GB+ VRAM required): https://huggingface.co/OpenBuddy/openbuddy-falcon-40b-v9-bf16
+OpenBuddy-Llama2-70B: https://huggingface.co/OpenBuddy/openbuddy-llama2-70b-v10.1-bf16
 
-### OpenBuddy-LLaMA2-13B
+- Currently, this is our best model for general-purpose applications.
 
-- Recommended for most use cases!
-- Offers improved performance and capabilities over LLaMA1
-- GGML format (3-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
-- Huggingface format (High-end GPU, 32GB+ VRAM required): https://huggingface.co/OpenBuddy/openbuddy-llama2-13b-v8.1-fp16
+OpenBuddy-Llemma-34B: https://huggingface.co/OpenBuddy/openbuddy-llemma-34b-v13.1
 
-### OpenBuddy-LLaMA-30B
-
-- Outstanding performance and capabilities
-- Beats ChatGPT-3.5 in double-blind tests
-- GGML format (3-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-30b-ggml
-- Huggingface format (High-end GPU, 80GB+ VRAM required) https://huggingface.co/OpenBuddy/openbuddy-llama-30b-v7.1-bf16
+- This model excels in logical reasoning, understanding, and coding capabilities.
 
 
-### OpenBuddy-Falcon-7B
+### GGUF Format
 
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-falcon-7b-v5-fp16
+GGUF is a streamlined model format utilized by [llama.cpp](https://github.com/ggerganov/llama.cpp), a C++ inference engine tailored for personal-level CPU/GPU implementation.
 
-### OpenBuddy-LLaMA-7B
+TheBloke offers GGUF quantized versions of the OpenBuddy models, available here: [link](https://huggingface.co/TheBloke?search_models=openbuddy)
 
-- GGML format (3-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-llama-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-llama-7b-v4-fp16
+### More Models
+
+More models are available on our HuggingFace: https://huggingface.co/OpenBuddy
 
 
-### OpenBuddy-OpenLLaMA-7B
-
-- Limited capabilities, falcon-7b is recommended instead
-- GGML format (3/5-bit, CPU/GPU, llama.cpp): https://huggingface.co/OpenBuddy/openbuddy-ggml
-- Huggingface format: https://huggingface.co/OpenBuddy/openbuddy-openllama-7b-v5-fp16

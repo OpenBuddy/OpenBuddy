@@ -45,12 +45,12 @@ Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=b
 - 扩展的词汇表和对常见的 CJK 字符的支持
 - 通过多轮对话数据集进行微调以提高性能
 - 提供多种模型大小，适用于不同的应用场景和需求：3B, 7B, 13B, 30B, 40B, 65B, 70B
-- 通过 llama.cpp 提供对 CPU 部署的 5 位量化（输出质量稍有降低）
+- 通过 llama.cpp 提供 3/4/5 位量化部署支持（输出质量稍有降低）
 - 积极的开发计划，预期未来的特性和改进
 
 ## 模型版本
 
-OpenBuddy 目前提供两个模型系列：Falcon 和 LLaMA。
+OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
 
 关于下载模型的更多信息可以在 [模型](models.md) 页面找到。
 
