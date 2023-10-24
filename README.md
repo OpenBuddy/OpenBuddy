@@ -45,12 +45,6 @@ Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=bl
 - 3/4/5-bit quantization for CPU deployment via llama.cpp (with slightly reduced output quality)
 - Active development plans for future features and improvements
 
-## Model Download
-
-OpenBuddy currently offers model downloads on HuggingFace and ModelScope.
-
-More information about downloading the models can be found in the [Models](models.md) page.
-
 ## Future Plans
 
 - Enhancing multilingual performance
@@ -59,20 +53,33 @@ More information about downloading the models can be found in the [Models](model
 - Investigating Reinforcement Learning with Human Feedback (RLHF)
 - Exploring the addition of multimodal capabilities for dialogues with image context
 
-## Installation
+## Model Download
 
-For `OpenBuddy-LLaMA` series models, due to LLaMA licensing restrictions, you need the original LLaMA-7B model to utilize this model. To decrypt the model weights:
+OpenBuddy currently offers model downloads on HuggingFace and ModelScope.
 
-1. Acquire the original LLaMA-7B model (not the Huggingface version).
-2. Clone this GitHub repository.
-3. Ensure that you have Python 3.7 or higher and numpy installed, you can install numpy with `pip install numpy`.
-4. Run the following command, try python3 if python does not work:
+More information about downloading the models can be found in the [Models](models.md) page.
+
+## Prompt Format
+
+Model input should be formatted as follows:
 
 ```
-python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
+You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
+Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
+You can speak fluently in many languages, for example: English, Chinese.
+You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
+You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
+
+User: {History input}
+Assistant: {History output}
+...
+User: {Input}
+Assistant:
 ```
 
-For `OpenBuddy-Falcon` series models, you can directly download the model from Huggingface and enjoy it!
+Please note there should not be any spaces or line breaks after the last "Assistant:" line.
+
 
 ## Usage with llama.cpp on CPU/GPU (Recommended)
 

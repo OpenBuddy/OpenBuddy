@@ -48,11 +48,6 @@ Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=b
 - 通过 llama.cpp 提供 3/4/5 位量化部署支持（输出质量稍有降低）
 - 积极的开发计划，预期未来的特性和改进
 
-## 模型版本
-
-OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
-
-关于下载模型的更多信息可以在 [模型](models.md) 页面找到。
 
 ## 未来计划
 
@@ -62,22 +57,35 @@ OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
 - 探索使用人类反馈的强化学习 (RLHF)
 - 探索添加多模态能力，用于有图像上下文的对话
 
-## 安装
+## 模型版本
 
-对于 `OpenBuddy-LLaMA` 系列模型，由于 LLaMA 许可证的限制，您需要原始的 LLaMA-7B 模型才能使用此模型。解密模型权重的步骤如下：
+OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
 
-1. 获取原始的 LLaMA-7B 模型（非 Huggingface 版本）。
-2. 克隆此 GitHub 仓库。
-3. 确保您已经安装了 Python 3.7 或更高版本以及 numpy，可以通过 `pip install numpy` 命令安装 numpy。
-4. 运行以下命令，如果 python 不起作用，尝试 python3：
+关于下载模型的更多信息可以在 [模型](models.md) 页面找到。
+
+## Prompt 格式
+
+模型输入格式如下：
 
 ```
-python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
+You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
+Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
+You can speak fluently in many languages, for example: English, Chinese.
+You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
+You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
+
+User: {History input}
+Assistant: {History output}
+...
+User: {Input}
+Assistant:
 ```
 
-对于 `OpenBuddy-Falcon` 系列模型，您可以直接从 Huggingface 下载模型并开始使用，无需解密！
+请注意，最后一个“Assistant:”后不应有任何空格或换行符。
 
-## 在 CPU/GPU 上基于 llama.cpp 部署(推荐)
+
+## 在 CPU/GPU 上基于 llama.cpp 部署
 
 部分模型已被转换为 ggml 格式，使其兼容 llama.cpp。llama.cpp 是一个用于 LLaMA 模型的纯 C++ 推理引擎，原本设计用于 CPU 部署。
 
@@ -91,7 +99,7 @@ python decrypt.py [path-to-consolidated.00.pth] [path-to-our-model-folder]
 
 ## 在高端 GPU 上基于 Transformers 部署
 
-要在 GPU 上使用 huggingface 的 Transformers 库与 OpenBuddy，按照 [hello.py](examples/hello.py) 示例进行操作。对于文本生成的更全面理解，请参考 [Transformers 文档](https://huggingface.co/docs/transformers/index)。7B 模型可能需要多达 24GB 的 GPU 内存。
+要在 GPU 上使用 huggingface 的 Transformers 库与 OpenBuddy，请按照 [hello.py](examples/hello.py) 示例进行操作。关于Transformers库的更多细节请参考 [Transformers 文档](https://huggingface.co/docs/transformers/index)。7B 模型可能需要多达 24GB 的 GPU 内存。
 
 ## 使用推理框架
 
