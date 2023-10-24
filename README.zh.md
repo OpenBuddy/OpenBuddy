@@ -77,7 +77,6 @@ You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/Ope
 
 User: {History input}
 Assistant: {History output}
-...
 User: {Input}
 Assistant:
 ```
