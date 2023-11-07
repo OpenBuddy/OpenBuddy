@@ -16,6 +16,10 @@
 
 在公众号发送“加群”，既可获得微信群邀请、参与新模型内测等活动。
 
+## 社区
+
+欢迎关注我们的 ModelScope 中文社区，体验精选模型的高速下载和一键部署：ModelScope: https://modelscope.cn/organization/OpenBuddy
+
 
 官网：[https://openbuddy.ai](https://openbuddy.ai)
 

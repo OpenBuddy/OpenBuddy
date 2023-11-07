@@ -14,12 +14,16 @@
 
 搜索“**开源智友**”，关注公众号并发送“加群”即可获得微信群邀请、参与新模型内测等活动
 
+欢迎关注我们的魔搭社区，体验精选模型的高速下载和一键部署：ModelScope: https://modelscope.cn/organization/OpenBuddy
+
 
 Website: [https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub: [https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
 Huggingface: https://huggingface.co/OpenBuddy
+
+
 
 ![Demo](media/demo.png)
 

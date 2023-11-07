@@ -6,9 +6,9 @@
 
 https://modelscope.cn/organization/OpenBuddy
 
-### Suggested Models (HuggingFace format)
+### Selected Models (HuggingFace format)
 
-OpenBuddy-Mistral-7B: https://huggingface.co/OpenBuddy/openbuddy-mistral-7b-v13.1
+OpenBuddy-Zephyr-7B: https://huggingface.co/OpenBuddy/openbuddy-zephyr-7b-v14.1
 
 - This model exhibits a powerful comprehension capability, and its performance approaches that of our 34B model in certain tasks.
 
@@ -20,7 +20,7 @@ OpenBuddy-Llama2-70B: https://huggingface.co/OpenBuddy/openbuddy-llama2-70b-v10.
 
 - Currently, this is our best model for general-purpose applications.
 
-OpenBuddy-Llemma-34B: https://huggingface.co/OpenBuddy/openbuddy-llemma-34b-v13.1
+OpenBuddy-Llemma-34B: https://huggingface.co/OpenBuddy/openbuddy-llemma-34b-v13.2
 
 - This model excels in logical reasoning, understanding, and coding capabilities.
 
