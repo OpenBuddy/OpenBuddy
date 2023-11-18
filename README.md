@@ -98,15 +98,18 @@ After installing the model and [llama.cpp](https://github.com/ggerganov/llama.cp
 
 For now, only OpenBuddy-LLaMA series models are supported by llama.cpp, the developers of llama.cpp are working on adding support for Falcon models.
 
-## Usage with Transformers on a high-end GPU
+## Usage with Transformers
 
-To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). A 7B model may require up to 24GB of GPU memory.
+To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). 
 
-## Usage with Inference Frameworks
+Please note that a 7B model may require up to 24GB of GPU memory.
 
-LLM inference frameworks including [Langport](https://github.com/vtuber-plan/langport) and [FastChat](https://github.com/lm-sys/FastChat), have been adapted to support OpenBuddy. Please refer to the respective repositories for more information.
+## Usage with Inference Infrastructure
 
-We are actively working on developing our own inference system, [GrandSage](https://github.com/OpenBuddy/GrandSage). GrandSage is currently in the early stages of development.
+We are actively working on developing our own inference infrastructure, [GrandSage](https://github.com/OpenBuddy/GrandSage). GrandSage is a scalable, high-performance, distributed inference engine for OpenBuddy models. It aims to support both CPU and GPU inference, and is capable of serving multiple models simultaneously.
+
+LLM inference frameworks including [Langport](https://github.com/vtuber-plan/langport) and [FastChat](https://github.com/lm-sys/FastChat), have also been adapted to support OpenBuddy. Please refer to the respective repositories for more information.
+
 
 ## Disclaimer
 
@@ -120,9 +123,11 @@ By using OpenBuddy, you agree to these terms and conditions, and acknowledge tha
 
 OpenBuddy-LLaMA series models are subject to Meta's licensing agreement. These models are intended for use only by individuals who have obtained approval from Meta and are eligible to download LLaMA. If you have not obtained approval from Meta, you must visit the https://ai.meta.com/llama/ page, read and agree to the model's licensing agreement, submit an application, and wait for approval from Meta before downloading the model from the model page.
 
-For the OpenBuddy-Falcon and OpenBuddy-OpenLLaMA series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
+For the OpenBuddy-Falcon-7B/40B, OpenBuddy-Mistral, OpenBuddy-Zephyr and OpenBuddy-OpenLLaMA series models, they are released under the Apache 2.0 License. Please refer to the Apache 2.0 License for applicable scope and restrictions.
 
-Regarding the source code related to the OpenBuddy open-source project (including, but not limited to, test code and the GrandSage Inference project), they are released under the GPL 3.0 License.
+For other models, they are usually released under the same license as the base model. Please refer to the Model Card for more information.
+
+Regarding the source code related to the OpenBuddy open-source project (including, but not limited to, example code), they are released under the Apache 2.0 License.
 
 ## Acknowledgements
 
