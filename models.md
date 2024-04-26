@@ -8,30 +8,36 @@ https://modelscope.cn/organization/OpenBuddy
 
 ### Selected Models (HuggingFace format)
 
-OpenBuddy-Zephyr-7B: https://huggingface.co/OpenBuddy/openbuddy-zephyr-7b-v14.1
+Our curated list of models, which possess impressive capabilities within their respective sizes.
 
-- This model exhibits a powerful comprehension capability, and its performance approaches that of our 34B model in certain tasks.
+This models are intended for use in vllm or transformers.
 
-OpenBuddy-StableLM-3B: https://huggingface.co/OpenBuddy/openbuddy-stablelm-3b-v13
+https://huggingface.co/collections/OpenBuddy/our-selected-models-65369270912eef259074d3dc
 
-- This is the most compact model that still maintains satisfactory language understanding, although its knowledge is somewhat limited
-
-OpenBuddy-Llama2-70B: https://huggingface.co/OpenBuddy/openbuddy-llama2-70b-v10.1-bf16
-
-- Currently, this is our best model for general-purpose applications.
-
-OpenBuddy-Llemma-34B: https://huggingface.co/OpenBuddy/openbuddy-llemma-34b-v13.2
-
-- This model excels in logical reasoning, understanding, and coding capabilities.
+Quantized models are also available in this collection: https://huggingface.co/collections/OpenBuddy/quantized-models-65d1e085bf849f3b7982a1a2
 
 
-### GGUF/GPT-Q/AWQ quantized models
+### GGUF models (Recommended for personal use)
 
-GGUF is a model format utilized by [llama.cpp](https://github.com/ggerganov/llama.cpp), a C++ inference engine tailored for personal-level CPU/GPU implementation.
+GGUF is a format defined by llama.cpp. It is optimized for personal-level CPU/GPU inference.
 
-TheBloke offers GGUF/GPT-Q/AWQ quantized versions of the OpenBuddy models, available here: [link](https://huggingface.co/TheBloke?search_models=openbuddy)
+GGUF  models are available on Ollama, a platform for deploying and serving models for personal-level CPU/GPU inference.
 
-Please note, the quality of the GPT-Q and AWQ quantized models depends on the text data used during quantization. We recommend quantizing the models with your own data when quality is critical in your application.
+After you have installed [Ollama](https://github.com/ollama/ollama) , you can deploy our model with a single command:
+
+```
+ollama run openbuddy/openbuddy-llama3-8b-v21.1-8k
+```
+
+You can also find more of our models here: https://ollama.com/openbuddy
+
+
+### GPT-Q/AWQ quantized models
+
+This models are intended for use in vllm or transformers.
+
+https://huggingface.co/collections/OpenBuddy/quantized-models-65d1e085bf849f3b7982a1a2
+
 
 ### More Models
 

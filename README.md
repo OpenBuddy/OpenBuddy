@@ -1,10 +1,8 @@
 # OpenBuddy - Open Multilingual Chatbot for Everyone
 
-
 <div align="center">
   <img src="media/logo.png" width="300px">
 </div>
-
 
 [中文](README.zh.md) | [English](README.md)
 
@@ -18,14 +16,11 @@
 
 https://modelscope.cn/organization/OpenBuddy
 
-
 Website: [https://openbuddy.ai](https://openbuddy.ai)
 
 GitHub: [https://github.com/OpenBuddy/OpenBuddy](https://github.com/OpenBuddy/OpenBuddy)
 
 Huggingface: https://huggingface.co/OpenBuddy
-
-
 
 ![Demo](media/demo.png)
 
@@ -37,10 +32,9 @@ Our mission with OpenBuddy is to provide a free, open, and offline-capable AI mo
 
 ## Online Demo
 
-Currently, the OpenBuddy-70B demo is available on our Discord server. Please join our Discord server to try it out!
+Currently, the OpenBuddy demo is available on our Discord server. Please join our Discord server to try it out!
 
 Discord: [![Discord](https://img.shields.io/discord/1100710961549168640?color=blueviolet&label=Discord)](https://discord.gg/6fU2s9cGjA)
-
 
 ## Key Features
 
@@ -67,48 +61,27 @@ More information about downloading the models can be found in the [Models](model
 
 ## Prompt Format
 
-Model input should be formatted as follows:
+For models with versions >= 21.1, the prompt format is defined in the model card.
 
-```
-You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
-Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-You can speak fluently in many languages, for example: English, Chinese.
-You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
-You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
+For models < 21.1: refer to: [Legacy Prompt Format](legacy-prompt-format.md)
 
-User: {History input}
-Assistant: {History output}
-User: {Input}
-Assistant:
+## Inference on Ollama (recommended for personal users)
+
+Ollama is a platform for locally deploying large models on consumer-grade hardware. It supports various inference methods such as CPU, CUDA, ROCm, and automatically selects the best hardware accelerator based on the actual situation. Ollama supports model quantization deployment, which means that large models can also run on devices with small memory.
+
+Ollama implements one-stop model download, local deployment, and running. After [installing Ollama](https://github.com/ollama/ollama), you can deploy the 4-bit quantized version of the 8B model with just one command:
+
+```sh
+ollama run openbuddy/openbuddy-llama3-8b-v21.1-8k
 ```
 
-Please note there should not be any spaces or line breaks after the last "Assistant:" line.
+More of our models can be found at: https://ollama.com/openbuddy
 
+## High-concurrency inference using vllm in Linux + CUDA environment
 
-## Usage with llama.cpp on CPU/GPU (Recommended)
+Models from v21 and later are defined in `tokenizer_config.json` with the prompt format, and can be directly deployed with `vllm` for services similar to OpenAI's API. For more information, please refer to the [vllm documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html).
 
-Models have been converted to ggml format, making it compatible with llama.cpp. llama.cpp is a pure C++ inference engine for LLaMA models, originally designed for CPU deployment.
-
-After recent updates, llama.cpp now supports cuBLAS and OpenCL acceleration, which means you can utilize your AMD/NVIDIA GPU to accelerate inference.
-
-The model is available at: [Models](models.md), `GGML format` is the variant you should download.
-
-After installing the model and [llama.cpp](https://github.com/ggerganov/llama.cpp), you can run the `chat-llamacpp.bat` or `chat-llamacpp.sh` script to interact with OpenBuddy through the interactive console.
-
-For now, only OpenBuddy-LLaMA series models are supported by llama.cpp, the developers of llama.cpp are working on adding support for Falcon models.
-
-## Usage with Transformers
-
-To use OpenBuddy with huggingface's Transformers library on a GPU, follow the [hello.py](examples/hello.py) example. For a more comprehensive understanding of text generation, please refer to the [Transformers documentation](https://huggingface.co/docs/transformers/index). 
-
-Please note that a 7B model may require up to 24GB of GPU memory.
-
-## Usage with Inference Infrastructure
-
-We are actively working on developing our own inference infrastructure, [GrandSage](https://github.com/OpenBuddy/GrandSage). GrandSage is a scalable, high-performance, distributed inference engine for OpenBuddy models. It aims to support both CPU and GPU inference, and is capable of serving multiple models simultaneously.
-
-LLM inference frameworks including [Langport](https://github.com/vtuber-plan/langport) and [FastChat](https://github.com/lm-sys/FastChat), have also been adapted to support OpenBuddy. Please refer to the respective repositories for more information.
+vllm is more suitable for high concurrency, multiple users, long context and other scenarios. Through technologies such as FP8 KV Cache, the concurrency and long text performance of vllm can be further improved. vllm currently only supports the Linux operating system and usually requires a CUDA GPU.
 
 
 ## Disclaimer
@@ -135,10 +108,10 @@ We extend our deepest gratitude to the open-source community for their selfless 
 
 Firstly, we would like to specifically thank WeiKe Software for their robust support and help in the aspect of model training. We also want to thank [AIOS.club](https://github.com/aios-club) for their invaluable support.
 
-We owe our thanks to [Mr. Su Jianlin](https://kexue.fm/) for providing invaluable advice during the model training process. Not only did he provide professional advice, but he also introduced the NBCE method, which enables open-source models like OpenBuddy to support inference with a super-long context of 10K. This has had a profound impact on our work.
+We thank [Mr. Su Jianlin](https://kexue.fm/) for his valuable advice during the model training process. Not only did he provide professional advice, but he also proposed several methods for context expansion, enabling open models to support inference with long context, which has had a profound impact on our work.
 
 Our appreciation goes to [flysnow](https://www.flysnow.org/about/) and [jstzwj](https://github.com/jstzwj). They provided valuable advice during the early stages of model development and extended substantial support and assistance in model inference.
 
 At the same time, we also wish to express our gratitude to camera and other enthusiasts of open language models. Their suggestions played a pivotal role in improving the model.
 
-Once again, we thank everyone who has contributed to the OpenBuddy project. Our success is inseparable from your support and encouragement. Moreover, we acknowledge Tii and Facebook for introducing the Falcon model and the LLaMA model, respectively, which have laid a solid foundation for our project.
+Once again, we thank everyone who has contributed to the OpenBuddy project. Our success is inseparable from your support and encouragement.

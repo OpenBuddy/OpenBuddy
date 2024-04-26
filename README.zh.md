@@ -39,7 +39,7 @@ OpenBuddy 是一款强大的开源多语言聊天机器人模型，面向全球�
 
 ## 在线演示
 
-目前，OpenBuddy-70B 的演示版本在我们的 Discord 服务器上可用。请加入我们的 Discord 服务器试用！
+目前，OpenBuddy 的演示版本在我们的 Discord 服务器上可用。请加入我们的 Discord 服务器试用！
 
 Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=blueviolet&label=Discord)](https://discord.gg/6fU2s9cGjA)
 
@@ -51,7 +51,6 @@ Discord：[![Discord](https://img.shields.io/discord/1100710961549168640?color=b
 - 提供多种模型大小，适用于不同的应用场景和需求：3B, 7B, 13B, 30B, 40B, 65B, 70B
 - 通过 llama.cpp 提供 3/4/5 位量化部署支持（输出质量稍有降低）
 - 积极的开发计划，预期未来的特性和改进
-
 
 ## 未来计划
 
@@ -69,46 +68,29 @@ OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
 
 ## Prompt 格式
 
-模型输入格式如下：
+对于模型版本>=21.1，prompt 格式在模型的 Model Card 中定义。
+
+对于模型<21.1：请参阅 [Legacy Prompt Format](legacy-prompt-format.md)
+
+
+## 在消费级 CPU/GPU 上基于 Ollama 推理（推荐个人用户使用）
+
+Ollama 是一个在消费级硬件上本地部署大模型的平台，它支持 CPU、CUDA、ROCm 等多种推理方式、并会根据实际情况自动选择最佳的硬件加速器。Ollama 支持模型量化部署，这意味着小内存设备也可以运行大模型。
+
+Ollama 实现了模型的一站式下载、本地部署、和运行，在(安装 Ollama )[https://github.com/ollama/ollama]之后，只需用一行命令即可部署 8B 模型的 4-bit 量化版：
 
 ```
-You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.
-Always answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-You can speak fluently in many languages, for example: English, Chinese.
-You cannot access the internet, but you have vast knowledge, cutoff: 2021-09.
-You are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.
-
-User: {History input}
-Assistant: {History output}
-User: {Input}
-Assistant:
+ollama run openbuddy/openbuddy-llama3-8b-v21.1-8k
 ```
 
-请注意，最后一个“Assistant:”后不应有任何空格或换行符。
+更多我们的模型可以在 https://ollama.com/openbuddy 上找到。
 
+## 在 Linux + CUDA 环境下使用 vllm 实现高并发推理
 
-## 在 CPU/GPU 上基于 llama.cpp 部署
+v21 及之后的模型均在 `tokenizer_config.json` 里定义了 prompt 格式，可以直接使用 `vllm` 部署类似 OpenAI 的 API 服务。更多信息请参考 [vllm 文档](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html)。
 
-部分模型已被转换为 ggml 格式，使其兼容 llama.cpp。llama.cpp 是一个用于 LLaMA 模型的纯 C++ 推理引擎，原本设计用于 CPU 部署。
+vllm 更适合高并发、多用户、长上下文等场景。通过 FP8 KV Cache 等技术，可以进一步提升 vllm 的并发能力和长文性能。vllm 目前只支持 Linux 操作系统，并通常需要 CUDA GPU。
 
-经过最近的更新，llama.cpp 现在支持 cuBLAS 和 OpenCL 加速，这意味着您可以利用您的 AMD/NVIDIA GPU 来加速推理。
-
-模型可以在 [模型](models.md) 页面找到，`GGML format` 是你应该下载的版本。
-
-安装模型和 [llama.cpp](https://github.com/ggerganov/llama.cpp) 后，你可以运行 `chat-llamacpp.bat` 或 `chat-llamacpp.sh` 脚本在交互式控制台与 OpenBuddy 进行交互。
-
-目前，只有 OpenBuddy-LLaMA 系列模型被 llama.cpp 支持，llama.cpp 的开发者正在努力为 Falcon 模型添加支持。
-
-## 在高端 GPU 上基于 Transformers 部署
-
-要在 GPU 上使用 huggingface 的 Transformers 库与 OpenBuddy，请按照 [hello.py](examples/hello.py) 示例进行操作。关于Transformers库的更多细节请参考 [Transformers 文档](https://huggingface.co/docs/transformers/index)。7B 模型可能需要多达 24GB 的 GPU 内存。
-
-## 使用推理框架
-
-LLM 推理框架，包括 [Langport](https://github.com/vtuber-plan/langport) 和 [FastChat](https://github.com/lm-sys/FastChat)，已经被适配以支持 OpenBuddy。请参考各自的仓库获取更多信息。
-
-我们正在积极开发我们自己的推理系统 [GrandSage](https://github.com/OpenBuddy/GrandSage)。GrandSage 目前处于开发的早期阶段。
 
 ## 免责声明
 
@@ -132,10 +114,10 @@ OpenBuddy-LLaMA系列模型受Meta的许可协议限制。这些模型仅供已�
 
 首先，我们尤其要感谢威科软件，在模型训练方面提供了强大的支持和帮助。同时，我们要感谢[AIOS.club](https://github.com/aios-club)为我们提供的宝贵支持。
 
-感谢[苏剑林](https://kexue.fm/)先生在模型训练过程中给出了宝贵的建议，他不仅提供了专业的建议，而且还提出了 NBCE 方法，这使得 OpenBuddy 等开源模型能够支持10K超长上下文的推理，对我们的工作产生了深远影响。
+感谢[苏剑林](https://kexue.fm/)先生在模型训练过程中给出了宝贵的建议，他不仅提供了专业的建议，而且还提出了多种上下文扩容方法，使得开源模型能够支持超长上下文的推理，对我们的工作产生了深远影响。
 
 我们要向[飞雪无情](https://www.flysnow.org/about/)和[jstzwj](https://github.com/jstzwj)表达我们的谢意，他们在模型开发的早期阶段为我们提供了宝贵的建议，而且在模型推理方面提供了大力的支持和帮助。
 
 同时，我们也要感谢 camera 等开放语言模型的爱好者，他们的建议对模型的改进起到了重要的推动作用。
 
-再次感谢所有对 OpenBuddy 项目有所贡献的每一个人，我们的成功离不开你们的支持和鼓励。此外，我们还感谢 Tii 和 Facebook，它们分别推出的 Falcon 模型和 LLaMA 模型，为我们的项目打下了坚实的基础。
+再次感谢所有对 OpenBuddy 项目有所贡献的每一个人，我们的成功离不开你们的支持和鼓励。
