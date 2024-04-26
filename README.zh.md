@@ -77,7 +77,7 @@ OpenBuddy 目前在 HuggingFace 和 ModelScope 提供模型下载。
 
 Ollama 是一个在消费级硬件上本地部署大模型的平台，它支持 CPU、CUDA、ROCm 等多种推理方式、并会根据实际情况自动选择最佳的硬件加速器。Ollama 支持模型量化部署，这意味着小内存设备也可以运行大模型。
 
-Ollama 实现了模型的一站式下载、本地部署、和运行，在(安装 Ollama )[https://github.com/ollama/ollama]之后，只需用一行命令即可部署 8B 模型的 4-bit 量化版：
+Ollama 实现了模型的一站式下载、本地部署、和运行，在[安装 Ollama](https://github.com/ollama/ollama)之后，只需用一行命令即可部署 8B 模型的 4-bit 量化版：
 
 ```
 ollama run openbuddy/openbuddy-llama3-8b-v21.1-8k
