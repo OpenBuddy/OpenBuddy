@@ -65,7 +65,7 @@ For models with versions >= 21.1, the prompt format is defined in the model card
 
 For models < 21.1: refer to: [Legacy Prompt Format](legacy-prompt-format.md)
 
-## Inference on Ollama (recommended for personal users)
+## Inference with Ollama (recommended for personal users)
 
 Ollama is a platform for locally deploying large models on consumer-grade hardware. It supports various inference methods such as CPU, CUDA, ROCm, and automatically selects the best hardware accelerator based on the actual situation. Ollama supports model quantization deployment, which means that large models can also run on devices with small memory.
 
@@ -77,12 +77,13 @@ ollama run openbuddy/openbuddy-llama3-8b-v21.1-8k
 
 More of our models can be found at: https://ollama.com/openbuddy
 
-## High-concurrency inference using vllm in Linux + CUDA environment
+## High-concurrency Inference using `vllm` in Linux + CUDA GPU environment
 
-Models from v21 and later are defined in `tokenizer_config.json` with the prompt format, and can be directly deployed with `vllm` for services similar to OpenAI's API. For more information, please refer to the [vllm documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html).
+Starting form v21, OpenBuddy models have their prompt formats defined in the `tokenizer_config.json` file, allowing for direct deployment using `vllm` to provide an OpenAI-compatible API service.
 
-vllm is more suitable for high concurrency, multiple users, long context and other scenarios. Through technologies such as FP8 KV Cache, the concurrency and long text performance of vllm can be further improved. vllm currently only supports the Linux operating system and usually requires a CUDA GPU.
+For more information, please refer to the [vllm documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html).
 
+`vllm` is more suitable for high concurrency, multiple users, long context and other scenarios. Through technologies such as `FP8 KV Cache`, the concurrency and long text performance can be further improved. `vllm` currently only supports the Linux operating system and usually requires a CUDA GPU.
 
 ## Disclaimer
 
