@@ -2,8 +2,6 @@
 
 This guide explains how to control the thinking behavior of the OpenBuddy thinker models across different API protocols, assuming the model is served via `vllm`.
 
-`sglang`/`ollama`/etc. may also work but we have not tested it yet.
-
 This guide is applicable with our `thinker` models, `version 26` and above.
 
 ## Using with /v1/chat/completions API
@@ -49,9 +47,9 @@ We recommend using the raw `/v1/completions` API for precise control of the thin
 <|role|>user<|says|>History input 1<|end|>
 <|role|>assistant<|says|>History output 1<|end|>
 <|role|>user<|says|>Current input<|end|>
-<|role|>assistant<|says|><nothink/>
+<|role|>assistant<|says|><think></think>
 ```
 
-The special tags `<think>` and `<nothink/>` at the end of the assistant prompt control whether the model shows its reasoning process or provides direct answers.
+The special tags `<think>` and `</think>` at the end of the assistant prompt control whether the model shows its reasoning process or provides direct answers.
 
 
